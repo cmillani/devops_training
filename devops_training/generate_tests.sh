@@ -20,7 +20,7 @@ xcodebuild \
 -scheme devops_training \
 -enableCodeCoverage YES \
 -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.2' \
-test | xcpretty --test --color
+test | xcpretty --test --color -r junit
 
 slather coverage -x --scheme devops_training ./devops_training.xcodeproj
 

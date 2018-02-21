@@ -15,6 +15,7 @@
 		074D6851203DDDF00039A1E5 /* devops_trainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D6850203DDDF00039A1E5 /* devops_trainingTests.swift */; };
 		074D685C203DDDF00039A1E5 /* devops_trainingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D685B203DDDF00039A1E5 /* devops_trainingUITests.swift */; };
 		074D686B203DE7010039A1E5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D686A203DE7010039A1E5 /* Realm.framework */; };
+		074D686E203DEB9F0039A1E5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D686D203DEB9E0039A1E5 /* RealmSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		074D685B203DDDF00039A1E5 /* devops_trainingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devops_trainingUITests.swift; sourceTree = "<group>"; };
 		074D685D203DDDF00039A1E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		074D686A203DE7010039A1E5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		074D686D203DEB9E0039A1E5 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				074D686B203DE7010039A1E5 /* Realm.framework in Frameworks */,
+				074D686E203DEB9F0039A1E5 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +135,7 @@
 		074D6869203DE7010039A1E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				074D686D203DEB9E0039A1E5 /* RealmSwift.framework */,
 				074D686A203DE7010039A1E5 /* Realm.framework */,
 			);
 			name = Frameworks;
@@ -274,7 +278,8 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)//Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			outputPaths = (
 			);
