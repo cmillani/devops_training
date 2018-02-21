@@ -14,6 +14,7 @@
 		074D6846203DDDF00039A1E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 074D6844203DDDF00039A1E5 /* LaunchScreen.storyboard */; };
 		074D6851203DDDF00039A1E5 /* devops_trainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D6850203DDDF00039A1E5 /* devops_trainingTests.swift */; };
 		074D685C203DDDF00039A1E5 /* devops_trainingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D685B203DDDF00039A1E5 /* devops_trainingUITests.swift */; };
+		074D686B203DE7010039A1E5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D686A203DE7010039A1E5 /* Realm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		074D6857203DDDF00039A1E5 /* devops_trainingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = devops_trainingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		074D685B203DDDF00039A1E5 /* devops_trainingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devops_trainingUITests.swift; sourceTree = "<group>"; };
 		074D685D203DDDF00039A1E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		074D686A203DE7010039A1E5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074D686B203DE7010039A1E5 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				074D684F203DDDF00039A1E5 /* devops_trainingTests */,
 				074D685A203DDDF00039A1E5 /* devops_trainingUITests */,
 				074D6839203DDDF00039A1E5 /* Products */,
+				074D6869203DE7010039A1E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +129,14 @@
 			path = devops_trainingUITests;
 			sourceTree = "<group>";
 		};
+		074D6869203DE7010039A1E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				074D686A203DE7010039A1E5 /* Realm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +147,7 @@
 				074D6834203DDDF00039A1E5 /* Sources */,
 				074D6835203DDDF00039A1E5 /* Frameworks */,
 				074D6836203DDDF00039A1E5 /* Resources */,
+				074D686C203DE70B0039A1E5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,6 +266,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		074D686C203DE70B0039A1E5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)//Carthage/Build/iOS/Realm.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		074D6834203DDDF00039A1E5 /* Sources */ = {
@@ -427,6 +457,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = devops_training/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.caduebahia.devops-training";
@@ -441,6 +475,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = devops_training/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.caduebahia.devops-training";
