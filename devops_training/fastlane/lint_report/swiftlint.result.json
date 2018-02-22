@@ -1,0 +1,551 @@
+[
+  {
+    "character" : 5,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductVO.swift",
+    "line" : 10,
+    "reason" : "Variable name should be between 3 and 40 characters long: 'id'",
+    "rule_id" : "identifier_name",
+    "severity" : "Warning",
+    "type" : "Identifier Name"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductCreationViewController.swift",
+    "line" : 15,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductCreationViewController.swift",
+    "line" : 26,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductCreationViewController.swift",
+    "line" : 43,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductCreationViewController.swift",
+    "line" : 47,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductCreationViewController.swift",
+    "line" : 52,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductTableViewCell.swift",
+    "line" : 15,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductTableViewCell.swift",
+    "line" : 16,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductTableViewCell.swift",
+    "line" : 27,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductTableViewCell.swift",
+    "line" : 16,
+    "reason" : "Limit vertical whitespace to a single empty line. Currently 2.",
+    "rule_id" : "vertical_whitespace",
+    "severity" : "Warning",
+    "type" : "Vertical Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 16,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 23,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 25,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 27,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 32,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 34,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 39,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 41,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 43,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 46,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 49,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 53,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : 13,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 13,
+    "reason" : "Variable name should be between 3 and 40 characters long: 'id'",
+    "rule_id" : "identifier_name",
+    "severity" : "Warning",
+    "type" : "Identifier Name"
+  },
+  {
+    "character" : 19,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 26,
+    "reason" : "Opening braces should be preceded by a single space and on the same line as the declaration.",
+    "rule_id" : "opening_brace",
+    "severity" : "Warning",
+    "type" : "Opening Brace Spacing"
+  },
+  {
+    "character" : 21,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 33,
+    "reason" : "Force tries should be avoided.",
+    "rule_id" : "force_try",
+    "severity" : "Error",
+    "type" : "Force Try"
+  },
+  {
+    "character" : 9,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 35,
+    "reason" : "Force tries should be avoided.",
+    "rule_id" : "force_try",
+    "severity" : "Error",
+    "type" : "Force Try"
+  },
+  {
+    "character" : 21,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductDAO.swift",
+    "line" : 45,
+    "reason" : "Force tries should be avoided.",
+    "rule_id" : "force_try",
+    "severity" : "Error",
+    "type" : "Force Try"
+  },
+  {
+    "character" : 7,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_trainingTests\/devops_trainingTests.swift",
+    "line" : 12,
+    "reason" : "Type name should only contain alphanumeric characters: 'devops_trainingTests'",
+    "rule_id" : "type_name",
+    "severity" : "Error",
+    "type" : "Type Name"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_trainingTests\/devops_trainingTests.swift",
+    "line" : 13,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_trainingTests\/devops_trainingTests.swift",
+    "line" : 18,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_trainingTests\/devops_trainingTests.swift",
+    "line" : 23,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_trainingTests\/devops_trainingTests.swift",
+    "line" : 28,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_trainingTests\/devops_trainingTests.swift",
+    "line" : 35,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : 18,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductsTableViewController.swift",
+    "line" : 54,
+    "reason" : "Lines should not have trailing semicolons.",
+    "rule_id" : "trailing_semicolon",
+    "severity" : "Warning",
+    "type" : "Trailing Semicolon"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductsTableViewController.swift",
+    "line" : 27,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductsTableViewController.swift",
+    "line" : 47,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductsTableViewController.swift",
+    "line" : 49,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductsTableViewController.swift",
+    "line" : 52,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : 97,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductsTableViewController.swift",
+    "line" : 45,
+    "reason" : "Force casts should be avoided.",
+    "rule_id" : "force_cast",
+    "severity" : "Error",
+    "type" : "Force Cast"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductsTableViewController.swift",
+    "line" : 67,
+    "reason" : "Line should be 120 characters or less: currently 136 characters",
+    "rule_id" : "line_length",
+    "severity" : "Warning",
+    "type" : "Line Length"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/ProductsTableViewController.swift",
+    "line" : 72,
+    "reason" : "Line should be 120 characters or less: currently 124 characters",
+    "rule_id" : "line_length",
+    "severity" : "Warning",
+    "type" : "Line Length"
+  },
+  {
+    "character" : 7,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_trainingUITests\/devops_trainingUITests.swift",
+    "line" : 11,
+    "reason" : "Type name should only contain alphanumeric characters: 'devops_trainingUITests'",
+    "rule_id" : "type_name",
+    "severity" : "Error",
+    "type" : "Type Name"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_trainingUITests\/devops_trainingUITests.swift",
+    "line" : 12,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_trainingUITests\/devops_trainingUITests.swift",
+    "line" : 15,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_trainingUITests\/devops_trainingUITests.swift",
+    "line" : 17,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_trainingUITests\/devops_trainingUITests.swift",
+    "line" : 25,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_trainingUITests\/devops_trainingUITests.swift",
+    "line" : 30,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_trainingUITests\/devops_trainingUITests.swift",
+    "line" : 35,
+    "reason" : "Lines should not have trailing whitespace.",
+    "rule_id" : "trailing_whitespace",
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_trainingUITests\/devops_trainingUITests.swift",
+    "line" : 20,
+    "reason" : "Line should be 120 characters or less: currently 131 characters",
+    "rule_id" : "line_length",
+    "severity" : "Warning",
+    "type" : "Line Length"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_trainingUITests\/devops_trainingUITests.swift",
+    "line" : 23,
+    "reason" : "Line should be 120 characters or less: currently 182 characters",
+    "rule_id" : "line_length",
+    "severity" : "Warning",
+    "type" : "Line Length"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/AppDelegate.swift",
+    "line" : 16,
+    "reason" : "Limit vertical whitespace to a single empty line. Currently 2.",
+    "rule_id" : "vertical_whitespace",
+    "severity" : "Warning",
+    "type" : "Vertical Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/AppDelegate.swift",
+    "line" : 44,
+    "reason" : "Limit vertical whitespace to a single empty line. Currently 2.",
+    "rule_id" : "vertical_whitespace",
+    "severity" : "Warning",
+    "type" : "Vertical Whitespace"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/AppDelegate.swift",
+    "line" : 46,
+    "reason" : "Files should have a single trailing newline.",
+    "rule_id" : "trailing_newline",
+    "severity" : "Warning",
+    "type" : "Trailing Newline"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/AppDelegate.swift",
+    "line" : 17,
+    "reason" : "Line should be 120 characters or less: currently 144 characters",
+    "rule_id" : "line_length",
+    "severity" : "Warning",
+    "type" : "Line Length"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/AppDelegate.swift",
+    "line" : 23,
+    "reason" : "Line should be 120 characters or less: currently 285 characters",
+    "rule_id" : "line_length",
+    "severity" : "Error",
+    "type" : "Line Length"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/AppDelegate.swift",
+    "line" : 24,
+    "reason" : "Line should be 120 characters or less: currently 159 characters",
+    "rule_id" : "line_length",
+    "severity" : "Warning",
+    "type" : "Line Length"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/AppDelegate.swift",
+    "line" : 28,
+    "reason" : "Line should be 120 characters or less: currently 218 characters",
+    "rule_id" : "line_length",
+    "severity" : "Error",
+    "type" : "Line Length"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/AppDelegate.swift",
+    "line" : 29,
+    "reason" : "Line should be 120 characters or less: currently 141 characters",
+    "rule_id" : "line_length",
+    "severity" : "Warning",
+    "type" : "Line Length"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/AppDelegate.swift",
+    "line" : 33,
+    "reason" : "Line should be 120 characters or less: currently 155 characters",
+    "rule_id" : "line_length",
+    "severity" : "Warning",
+    "type" : "Line Length"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/AppDelegate.swift",
+    "line" : 37,
+    "reason" : "Line should be 120 characters or less: currently 194 characters",
+    "rule_id" : "line_length",
+    "severity" : "Warning",
+    "type" : "Line Length"
+  },
+  {
+    "character" : null,
+    "file" : "\/Users\/rodrigocarvalhodasilva\/Documents\/Development\/iOS\/Projects\/devops_training\/devops_training\/devops_training\/AppDelegate.swift",
+    "line" : 41,
+    "reason" : "Line should be 120 characters or less: currently 128 characters",
+    "rule_id" : "line_length",
+    "severity" : "Warning",
+    "type" : "Line Length"
+  }
+]
