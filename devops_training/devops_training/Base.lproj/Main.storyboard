@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,6 +40,7 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="gHb-if-vCc" firstAttribute="trailing" secondItem="fxc-qf-Qag" secondAttribute="trailing" id="3bV-TF-2H3"/>
                                         <constraint firstItem="fxc-qf-Qag" firstAttribute="leading" secondItem="iPs-Aw-0Ct" secondAttribute="leading" constant="26" id="4iQ-N4-wvs"/>
                                         <constraint firstItem="gHb-if-vCc" firstAttribute="top" secondItem="fxc-qf-Qag" secondAttribute="bottom" constant="1" id="6jd-s7-QWH"/>
                                         <constraint firstItem="fxc-qf-Qag" firstAttribute="top" secondItem="iPs-Aw-0Ct" secondAttribute="top" constant="11" id="CPv-T5-pma"/>
@@ -58,11 +60,72 @@
                             <outlet property="delegate" destination="adZ-xz-flV" id="UMm-Cf-NqN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Produtos" id="rhr-Oz-Mxr"/>
+                    <navigationItem key="navigationItem" title="Produtos" id="rhr-Oz-Mxr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4TR-Qs-xXP">
+                            <connections>
+                                <segue destination="NGe-8g-YXh" kind="show" id="4ao-x0-54N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vl-FX-ZFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-719" y="130"/>
+        </scene>
+        <!--Product Creation View Controller-->
+        <scene sceneID="eaZ-3S-Nyj">
+            <objects>
+                <viewController id="NGe-8g-YXh" customClass="ProductCreationViewController" customModule="devops_training" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="osy-dY-uNy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yvA-5O-mXV">
+                                <rect key="frame" x="39" y="247" width="297" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NGe-8g-YXh" id="BwO-X1-mju"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUc-AV-hqO">
+                                <rect key="frame" x="172" y="285" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="createProduct:" destination="NGe-8g-YXh" eventType="touchUpInside" id="4UW-vc-bQV"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qqz-41-65d">
+                                <rect key="frame" x="39" y="202" width="297" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="297" id="4Id-5s-T9f"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yvA-5O-mXV" firstAttribute="top" secondItem="qqz-41-65d" secondAttribute="bottom" constant="15" id="RS2-mj-5or"/>
+                            <constraint firstItem="qqz-41-65d" firstAttribute="centerX" secondItem="HmQ-fb-mJt" secondAttribute="centerX" id="dm7-m5-689"/>
+                            <constraint firstItem="fUc-AV-hqO" firstAttribute="centerX" secondItem="yvA-5O-mXV" secondAttribute="centerX" id="jpY-8Q-AT8"/>
+                            <constraint firstItem="fUc-AV-hqO" firstAttribute="top" secondItem="yvA-5O-mXV" secondAttribute="bottom" constant="8" id="o9N-vx-Cwi"/>
+                            <constraint firstItem="yvA-5O-mXV" firstAttribute="centerX" secondItem="qqz-41-65d" secondAttribute="centerX" id="tag-hK-sx0"/>
+                            <constraint firstItem="qqz-41-65d" firstAttribute="top" secondItem="HmQ-fb-mJt" secondAttribute="top" constant="138" id="w1H-ga-jkJ"/>
+                            <constraint firstItem="yvA-5O-mXV" firstAttribute="width" secondItem="qqz-41-65d" secondAttribute="width" id="xs7-Ck-wHf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HmQ-fb-mJt"/>
+                    </view>
+                    <connections>
+                        <outlet property="productName" destination="qqz-41-65d" id="64X-Xr-YHO"/>
+                        <outlet property="productPrice" destination="yvA-5O-mXV" id="5NK-x5-JYe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ER2-Jn-Qm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="129.98500749625188"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gJH-I0-2IV">

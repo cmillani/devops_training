@@ -17,6 +17,9 @@
 		074D686E203DEB9F0039A1E5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074D686D203DEB9E0039A1E5 /* RealmSwift.framework */; };
 		074D6870203DF4050039A1E5 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D686F203DF4050039A1E5 /* ProductTableViewCell.swift */; };
 		074D6872203DF6110039A1E5 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D6871203DF6110039A1E5 /* ProductsTableViewController.swift */; };
+		074D6874203EF6940039A1E5 /* ProductCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D6873203EF6940039A1E5 /* ProductCreationViewController.swift */; };
+		074D6876203EFBED0039A1E5 /* ProductDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D6875203EFBED0039A1E5 /* ProductDAO.swift */; };
+		074D6878203EFCA40039A1E5 /* ProductVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D6877203EFCA40039A1E5 /* ProductVO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		074D686D203DEB9E0039A1E5 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		074D686F203DF4050039A1E5 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		074D6871203DF6110039A1E5 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
+		074D6873203EF6940039A1E5 /* ProductCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCreationViewController.swift; sourceTree = "<group>"; };
+		074D6875203EFBED0039A1E5 /* ProductDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDAO.swift; sourceTree = "<group>"; };
+		074D6877203EFCA40039A1E5 /* ProductVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,9 @@
 				074D6847203DDDF00039A1E5 /* Info.plist */,
 				074D686F203DF4050039A1E5 /* ProductTableViewCell.swift */,
 				074D6871203DF6110039A1E5 /* ProductsTableViewController.swift */,
+				074D6873203EF6940039A1E5 /* ProductCreationViewController.swift */,
+				074D6875203EFBED0039A1E5 /* ProductDAO.swift */,
+				074D6877203EFCA40039A1E5 /* ProductVO.swift */,
 			);
 			path = devops_training;
 			sourceTree = "<group>";
@@ -297,9 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074D6878203EFCA40039A1E5 /* ProductVO.swift in Sources */,
 				074D6872203DF6110039A1E5 /* ProductsTableViewController.swift in Sources */,
+				074D6876203EFBED0039A1E5 /* ProductDAO.swift in Sources */,
 				074D683C203DDDF00039A1E5 /* AppDelegate.swift in Sources */,
 				074D6870203DF4050039A1E5 /* ProductTableViewCell.swift in Sources */,
+				074D6874203EF6940039A1E5 /* ProductCreationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,6 +24,10 @@ class ProductsTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
@@ -34,13 +38,14 @@ class ProductsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return ProductDAO.shared.getAllProducts().count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ProductTableViewCell
-
-        cell.setupCell(title: "Produto", price: 43.2)
+        let product = ProductDAO.shared.getAllProducts()[indexPath.item]
+        
+        cell.setupCell(title: product.name, price: product.price)
         
         return cell
     }
