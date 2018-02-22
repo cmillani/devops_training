@@ -1,0 +1,18 @@
+default_platform(:ios)
+
+platform :ios do
+    desc "Run unit tests"
+    lane :unit_test do
+        run_tests(
+            devices: ["iPhone 8"],
+            code_coverage: true,
+            scheme: "devops_training"
+        )
+        slather(
+            proj: "devops_training.xcodeproj",
+            scheme: "devops_training",
+            cobertura_xml: true,
+            output_directory: "fastlane/test_output"
+        )
+    end
+end
