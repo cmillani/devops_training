@@ -5,7 +5,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building...'
-
+        sonar-scanner-swift
       }
     }
 
