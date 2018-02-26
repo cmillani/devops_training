@@ -44,7 +44,11 @@ pipeline {
       steps {
         echo 'Building...'
         sh '''
-          
+          cd devops_training
+          fastlane build          
+          ls fastlane
+          ls **/**
+          cd ..
         '''
       }
     }
