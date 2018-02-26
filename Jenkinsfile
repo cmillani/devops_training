@@ -5,7 +5,10 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building...'
-        sonar-scanner-swift
+        sh 'cd devops_training'
+        sh 'carthage bootstrap'
+        sh 'sonar-scanner-swift'
+        sh 'cd ..'
       }
     }
 
