@@ -10,7 +10,7 @@ pipeline {
       steps {
         script {
           checkout scm
-          result = sh (script: "git log -1 | grep '.*\[ci skip\].*'", returnStatus: true)
+          result = sh (script: "git log -1 | grep '.*\\[ci skip\\].*'", returnStatus: true)
           if (result == 0) {
             echo ("'ci skip' spotted in git commit. Aborting.")
             shouldBuild = "false"
