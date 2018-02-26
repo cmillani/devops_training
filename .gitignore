@@ -70,3 +70,5 @@ cobertura.xml
 
 .scannerwork
 sonar-reports
+
+output
