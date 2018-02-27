@@ -12,25 +12,24 @@ platform :ios do
   end
 
   lane :metrics do
-    #scan(scheme: "devops_training", code_coverage: true, derived_data_path: "./DerivedData", output_directory: "./sonar-reports")
-    #slather(cobertura_xml: true, jenkins: true, scheme: "devops_training", build_directory: "./DerivedData", output_directory: "./sonar-reports", proj: "./devops_training.xcodeproj")
-    #sh("cd .. && lizard ./devops_training -l swift --xml > ./sonar-reports/lizard-report.xml")
-    #swiftlint(output_file: "./sonar-reports/swiftlint.txt", ignore_exit_status: true)
+    scan(scheme: "devops_training", code_coverage: true, derived_data_path: "./DerivedData", output_directory: "./sonar-reports")
+    slather(cobertura_xml: true, jenkins: true, scheme: "devops_training", build_directory: "./DerivedData", output_directory: "./sonar-reports", proj: "./devops_training.xcodeproj")
+    sh("cd .. && lizard ./devops_training -l swift --xml > ./sonar-reports/lizard-report.xml")
+    swiftlint(output_file: "./sonar-reports/swiftlint.txt", ignore_exit_status: true)
 
     version     = get_version_number(xcodeproj: "devops_training.xcodeproj")
     build       = get_build_number(xcodeproj: "devops_training.xcodeproj")
 
-    puts "#{version}b#{build}"
-    #sonar(project)
+    sonar(project_version: "#{version}b#{build}")
   end
 
   lane :build do
-    build_number = Actions.lane_context[Actions::SharedValues::BUILD_NUMBER] 
+    build_number = get_build_number(xcodeproj: "devops_training.xcodeproj")
     # build_app(scheme: "devops_training")
   end
 
   after_all do |lane|
-    commit_version_bump(message:"[ci skip] Version Bump to #{build_number}")
-    push_to_git_remote(force: true)
+    #commit_version_bump(message:"[ci skip] Version Bump to #{build_number}")
+    #push_to_git_remote(force: true)
   end
 end
