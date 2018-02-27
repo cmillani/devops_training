@@ -10,7 +10,7 @@ platform :ios do
     carthage(command: "bootstrap")
   end
 
-  lane :deploy do 
+  lane :deploy do
     increment_build_number
 
     metrics
@@ -35,6 +35,11 @@ platform :ios do
 
   lane :build do
     # build_app(scheme: "devops_training")
+  end
+
+  lane :screenshots do
+      capture_screenshots
+      frame_screenshots(white: true)
   end
 
 end

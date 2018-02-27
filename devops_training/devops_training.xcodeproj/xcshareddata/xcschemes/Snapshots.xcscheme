@@ -27,29 +27,8 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       language = ""
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "074D684B203DDDF00039A1E5"
-               BuildableName = "devops_trainingTests.xctest"
-               BlueprintName = "devops_trainingTests"
-               ReferencedContainer = "container:devops_training.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "074D6856203DDDF00039A1E5"
-               BuildableName = "devops_trainingUITests.xctest"
-               BlueprintName = "devops_trainingUITests"
-               ReferencedContainer = "container:devops_training.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
