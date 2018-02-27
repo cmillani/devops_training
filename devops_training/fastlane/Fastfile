@@ -6,8 +6,8 @@ platform :ios do
   desc "iOS app"
 
   before_all do
-    setup_jenkins
-    carthage(command: "bootstrap")
+    #setup_jenkins
+    #carthage(command: "bootstrap")
   end
 
   lane :demo do
@@ -38,6 +38,41 @@ platform :ios do
 
     sonar(project_version: "#{version}b#{build}",
           sonar_runner_args: "-Dsonar.branch=#{branch}")
+    
+    puts "CREDENTIALS::::::::"
+    puts ENV["SONAR_USR"]
+    puts ENV["SONAR_PWD"]
+    puts "CREDENTIALS::::::::"
+
+    UI.user_error!("Quality Gate Error") if !quality_gate
+  end
+
+  private_lane :quality_gate do
+    file = __dir__ + './.scannerwork/report-task.txt'
+    properties = {}
+    IO.foreach(file) do |line|
+      properties[$1.strip] = $2 if line =~ /([^=]*)=(.*)/
+    end
+
+    sonar_server_url = properties['serverUrl']
+    ce_task_url = properties['ceTaskUrl']
+
+    response = Net::HTTP.get(URI(ce_task_url))
+    ce_task = JSON.parse(response)
+
+    uri = URI(sonar_server_url + '/api/qualitygates/project_status?analysisId=' + ce_task["task"]["analysisId"])
+
+    response2 = Net::HTTP.start(uri.host, uri.port) do |http|
+      request = Net::HTTP::Get.new uri.request_uri
+      request.basic_auth ENV["SONAR_USR"], ENV["SONAR_PWD"]
+
+      response = http.request request # Net::HTTPResponse object
+
+      response.body
+    end
+    quality_gate = JSON.parse(response2)
+
+    quality_gate['projectStatus']['status'] != 'ERROR'
   end
 
   private_lane :deploy_prod do
