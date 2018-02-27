@@ -6,7 +6,7 @@
 //  Copyright © 2018 caduebahia. All rights reserved.
 //
 
-struct ProductVO {
+struct ProductVO: Codable {
     let id: String
     var name: String
     var price: Double

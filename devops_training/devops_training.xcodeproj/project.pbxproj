@@ -20,6 +20,8 @@
 		074D6874203EF6940039A1E5 /* ProductCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D6873203EF6940039A1E5 /* ProductCreationViewController.swift */; };
 		074D6876203EFBED0039A1E5 /* ProductDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D6875203EFBED0039A1E5 /* ProductDAO.swift */; };
 		074D6878203EFCA40039A1E5 /* ProductVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D6877203EFCA40039A1E5 /* ProductVO.swift */; };
+		AED77CC82045063700632BBB /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED77CC72045063700632BBB /* NetworkClient.swift */; };
+		AED77CCA20450BB600632BBB /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED77CC920450BB600632BBB /* ProductResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		074D6873203EF6940039A1E5 /* ProductCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCreationViewController.swift; sourceTree = "<group>"; };
 		074D6875203EFBED0039A1E5 /* ProductDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDAO.swift; sourceTree = "<group>"; };
 		074D6877203EFCA40039A1E5 /* ProductVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVO.swift; sourceTree = "<group>"; };
+		AED77CC72045063700632BBB /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		AED77CC920450BB600632BBB /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 				074D6873203EF6940039A1E5 /* ProductCreationViewController.swift */,
 				074D6875203EFBED0039A1E5 /* ProductDAO.swift */,
 				074D6877203EFCA40039A1E5 /* ProductVO.swift */,
+				AED77CC920450BB600632BBB /* ProductResponse.swift */,
+				AED77CC72045063700632BBB /* NetworkClient.swift */,
 			);
 			path = devops_training;
 			sourceTree = "<group>";
@@ -306,10 +312,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED77CCA20450BB600632BBB /* ProductResponse.swift in Sources */,
 				074D6878203EFCA40039A1E5 /* ProductVO.swift in Sources */,
 				074D6872203DF6110039A1E5 /* ProductsTableViewController.swift in Sources */,
 				074D6876203EFBED0039A1E5 /* ProductDAO.swift in Sources */,
 				074D683C203DDDF00039A1E5 /* AppDelegate.swift in Sources */,
+				AED77CC82045063700632BBB /* NetworkClient.swift in Sources */,
 				074D6870203DF4050039A1E5 /* ProductTableViewCell.swift in Sources */,
 				074D6874203EF6940039A1E5 /* ProductCreationViewController.swift in Sources */,
 			);
