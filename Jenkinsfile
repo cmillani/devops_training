@@ -30,8 +30,7 @@ pipeline {
         echo 'Analysing Code Quality...'
         sh '''
           cd devops_training
-          carthage bootstrap
-          sonar-scanner-swift
+          fastlane metrics
           cd ..
         '''
       }
