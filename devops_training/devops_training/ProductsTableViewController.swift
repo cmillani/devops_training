@@ -42,7 +42,9 @@ class ProductsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ProductTableViewCell
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath)
+			as? ProductTableViewCell else { return UITableViewCell() }
+		
         let product = ProductDAO.shared.getAllProducts()[indexPath.item]
         
         cell.setupCell(title: product.name, price: product.price)
@@ -51,6 +53,6 @@ class ProductsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80;
+        return 80
     }
 }

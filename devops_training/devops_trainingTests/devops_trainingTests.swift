@@ -9,7 +9,7 @@
 import XCTest
 @testable import devops_training
 
-class devops_trainingTests: XCTestCase {
+class DevopsTrainingTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

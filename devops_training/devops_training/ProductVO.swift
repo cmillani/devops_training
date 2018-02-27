@@ -7,7 +7,7 @@
 //
 
 struct ProductVO: Codable {
-    let id: String
+    let pID: String
     var name: String
     var price: Double
 }
