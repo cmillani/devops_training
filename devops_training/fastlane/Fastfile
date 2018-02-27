@@ -6,7 +6,6 @@ platform :ios do
   desc "iOS app"
 
   before_all do
-    ensure_git_status_clean
     setup_jenkins
     carthage(command: "bootstrap")
   end
