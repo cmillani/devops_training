@@ -57,7 +57,9 @@ public final class NetworkingClient {
 			return
 		}
 		
-		let request = URLRequest(url: url)
+		var request = URLRequest(url: url)
+		// azure precisa do header
+//		request.addValue("0a94646cc935417783cfded1eab879a5", forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
 		let dataTask = session.dataTask(with: request) { (data, _, error) in
 			completionHandler(data, error)
 		}
