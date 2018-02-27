@@ -10,15 +10,20 @@ platform :ios do
     carthage(command: "bootstrap")
   end
 
-  lane :deploy do 
+  lane :demo do
     increment_build_number
 
     metrics
-    build
+    test
 
     build_number = get_build_number(xcodeproj: "devops_training.xcodeproj")
     commit_version_bump(message:"[ci skip] Version Bump to #{build_number}")
     push_to_git_remote(force: true)
+  end
+
+  lane :prod do 
+    metrics
+    deploy 
   end
 
   lane :metrics do
@@ -29,12 +34,19 @@ platform :ios do
 
     version = get_version_number(xcodeproj: "devops_training.xcodeproj")
     build = get_build_number(xcodeproj: "devops_training.xcodeproj")
+    branch = git_branch
 
-    sonar(project_version: "#{version}b#{build}")
+    sonar(project_version: "#{version}b#{build}",
+          sonar_runner_args: "-Dsonar.branch=#{branch}")
   end
 
-  lane :build do
+  private lane :deploy do
     # build_app(scheme: "devops_training")
+    puts "Will Deploy"
+  end
+  
+  private lane :test do 
+    puts "Will Upload to Test"
   end
 
 end

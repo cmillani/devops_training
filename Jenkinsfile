@@ -22,7 +22,7 @@ pipeline {
     stage('Code Quality') {
       when {
         expression {
-          return shouldBuild
+          return shouldBuild && (GIT_BRANCH != "master") && (GIT_BRANCH != "develop")
         }
       }
       steps {
@@ -38,16 +38,30 @@ pipeline {
     stage('Deploy') {
       when {
         expression {
-          return shouldBuild
+          return shouldBuild && (GIT_BRANCH == "master")
         }
       }
       steps {
-        echo 'Building...'
+        echo 'Production Version...'
         sh '''
           cd devops_training
-          fastlane build          
-          ls fastlane
-          ls **/**
+          fastlane prod
+          cd ..
+        '''
+      }
+    }
+    
+    stage('Demo') {
+      when {
+        expression {
+          return shouldBuild && (GIT_BRANCH == "develop")
+        }
+      }
+      steps {
+        echo 'Development Version...'
+        sh '''
+          cd devops_training
+          fastlane demo
           cd ..
         '''
       }
