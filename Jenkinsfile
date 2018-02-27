@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 pipeline {
   agent any
   environment {
@@ -6,10 +8,9 @@ pipeline {
     shouldBuild = true 
   }
   stages {
-    stage('Checkout SCM') {
+    stage('Check CI Skip') {
       steps {
         script {
-          checkout scm
           result = sh (script: "git log -1 | grep '.*\\[ci skip\\].*'", returnStatus: true)
           if (result == 0) {
             echo ("'ci skip' spotted in git commit. Aborting.")
@@ -28,8 +29,7 @@ pipeline {
         echo 'Analysing Code Quality...'
         sh '''
           cd devops_training
-          carthage bootstrap
-          sonar-scanner-swift
+          fastlane metrics
           cd ..
         '''
       }
