@@ -53,12 +53,18 @@ platform :ios do
     IO.foreach(file) do |line|
       properties[$1.strip] = $2 if line =~ /([^=]*)=(.*)/
     end
+    
+    puts file
+
+    puts properties
 
     sonar_server_url = properties['serverUrl']
     ce_task_url = properties['ceTaskUrl']
 
     response = Net::HTTP.get(URI(ce_task_url))
     ce_task = JSON.parse(response)
+
+    puts ce_task
 
     uri = URI(sonar_server_url + '/api/qualitygates/project_status?analysisId=' + ce_task["task"]["analysisId"])
 
