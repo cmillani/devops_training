@@ -6,8 +6,8 @@ platform :ios do
   desc "iOS app"
 
   before_all do
-    #setup_jenkins
-    #carthage(command: "bootstrap")
+    setup_jenkins
+    carthage(command: "bootstrap")
   end
 
   lane :demo do
