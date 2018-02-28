@@ -61,6 +61,7 @@ platform :ios do
     sonar_server_url = properties['serverUrl']
     ce_task_url = properties['ceTaskUrl']
 
+    ce_task = nil
     Timeout::timeout(60) { 
       begin
         response = Net::HTTP.get(URI(ce_task_url))
