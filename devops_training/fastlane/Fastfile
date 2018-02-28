@@ -61,8 +61,13 @@ platform :ios do
     sonar_server_url = properties['serverUrl']
     ce_task_url = properties['ceTaskUrl']
 
-    response = Net::HTTP.get(URI(ce_task_url))
-    ce_task = JSON.parse(response)
+    Timeout::timeout(60) { 
+      begin
+        response = Net::HTTP.get(URI(ce_task_url))
+        ce_task = JSON.parse(response)
+        success = ce_task["task"]["status"] == "SUCCESS"
+      end until success ? success : sleep(5) && success
+    }
 
     puts ce_task
 
