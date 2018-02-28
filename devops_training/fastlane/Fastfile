@@ -78,22 +78,6 @@ platform :ios do
     quality_gate['projectStatus']['status'] != 'ERROR'
   end
 
-  lane :auth_test do 
-    uri = URI('http://httpbin.org/basic-auth/admin/admin')
-    
-    response2 = Net::HTTP.start(uri.host, uri.port) do |http|
-      request = Net::HTTP::Get.new uri.request_uri
-      request.basic_auth ENV["SONAR_USR"], ENV["SONAR_PWD"]
-
-      response = http.request request # Net::HTTPResponse object
-
-      response.body
-    end
-    
-    puts response2
-
-  end
-
   private_lane :deploy_prod do
     # build_app(scheme: "devops_training")
     puts "Will Deploy"
