@@ -22,34 +22,54 @@ pipeline {
     stage('Code Quality') {
       when {
         expression {
-          return shouldBuild
+          return shouldBuild && (GIT_BRANCH != "master") && (GIT_BRANCH != "develop")
         }
       }
       steps {
         echo 'Analysing Code Quality...'
-        sh '''
-          cd devops_training
-          fastlane metrics
-          cd ..
-        '''
+        withCredentials([usernamePassword(credentialsId: 'jenkins_scanner', usernameVariable: 'SONAR_USR', passwordVariable: 'SONAR_PWD')]) {
+          sh '''
+            cd devops_training
+            fastlane metrics
+            cd ..
+          '''
+        }
       }
     }
 
     stage('Deploy') {
       when {
         expression {
-          return shouldBuild
+          return shouldBuild && (GIT_BRANCH == "master")
         }
       }
       steps {
-        echo 'Building...'
-        sh '''
-          cd devops_training
-          fastlane build          
-          ls fastlane
-          ls **/**
-          cd ..
-        '''
+        echo 'Production Version...'
+        withCredentials([usernamePassword(credentialsId: 'jenkins_scanner', usernameVariable: 'SONAR_USR', passwordVariable: 'SONAR_PWD')]) {
+          sh '''
+            cd devops_training
+            fastlane prod
+            cd ..
+          '''
+        }
+      }
+    }
+    
+    stage('Demo') {
+      when {
+        expression {
+          return shouldBuild && (GIT_BRANCH == "develop")
+        }
+      }
+      steps {
+        echo 'Development Version...'
+        withCredentials([usernamePassword(credentialsId: 'jenkins_scanner', usernameVariable: 'SONAR_USR', passwordVariable: 'SONAR_PWD')]) { 
+          sh '''
+            cd devops_training
+            fastlane demo
+            cd ..
+          '''
+        }
       }
     }
   }

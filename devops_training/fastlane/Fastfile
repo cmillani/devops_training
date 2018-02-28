@@ -10,15 +10,20 @@ platform :ios do
     carthage(command: "bootstrap")
   end
 
-  lane :deploy do
+  lane :demo do
     increment_build_number
 
     metrics
-    build
+    deploy_tests
 
     build_number = get_build_number(xcodeproj: "devops_training.xcodeproj")
     commit_version_bump(message:"[ci skip] Version Bump to #{build_number}")
     push_to_git_remote(force: true)
+  end
+
+  lane :prod do 
+    metrics
+    deploy_prod
   end
 
   lane :metrics do
@@ -29,12 +34,57 @@ platform :ios do
 
     version = get_version_number(xcodeproj: "devops_training.xcodeproj")
     build = get_build_number(xcodeproj: "devops_training.xcodeproj")
+    branch = git_branch
 
-    sonar(project_version: "#{version}b#{build}")
+    sonar(project_version: "#{version}b#{build}",
+          sonar_runner_args: "-Dsonar.branch=#{branch}")
+
+    UI.user_error!("Quality Gate Error") if !quality_gate
   end
 
-  lane :build do
+  private_lane :quality_gate do
+    file = __dir__ + './.scannerwork/report-task.txt'
+    properties = {}
+    IO.foreach(file) do |line|
+      properties[$1.strip] = $2 if line =~ /([^=]*)=(.*)/
+    end
+    
+    sonar_server_url = properties['serverUrl']
+    ce_task_url = properties['ceTaskUrl']
+
+    ce_task = nil
+    Timeout::timeout(60) { 
+      begin
+        response = Net::HTTP.get(URI(ce_task_url))
+        ce_task = JSON.parse(response)
+        success = ce_task["task"]["status"] == "SUCCESS"
+      end until success ? success : sleep(5) && success
+    }
+
+    uri = URI(sonar_server_url + '/api/qualitygates/project_status?analysisId=' + ce_task["task"]["analysisId"])
+
+    response2 = Net::HTTP.start(uri.host, uri.port) do |http|
+      request = Net::HTTP::Get.new uri.request_uri
+      request.basic_auth ENV["SONAR_USR"], ENV["SONAR_PWD"]
+
+      response = http.request request # Net::HTTPResponse object
+
+      response.body
+    end
+    quality_gate = JSON.parse(response2)
+
+    puts "Quality Gate status -> #{quality_gate['projectStatus']['status']}"
+
+    quality_gate['projectStatus']['status'] != 'ERROR'
+  end
+
+  private_lane :deploy_prod do
     # build_app(scheme: "devops_training")
+    puts "Will Deploy"
+  end
+  
+  private_lane :deploy_tests do 
+    puts "Will Upload to Test"
   end
 
   lane :screenshots do
