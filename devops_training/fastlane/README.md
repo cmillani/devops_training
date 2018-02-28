@@ -26,14 +26,14 @@ iOS app
 fastlane ios prod
 ```
 
-### ios test
-```
-fastlane ios test
-```
-
 ### ios metrics
 ```
 fastlane ios metrics
+```
+
+### ios screenshots
+```
+fastlane ios screenshots
 ```
 
 

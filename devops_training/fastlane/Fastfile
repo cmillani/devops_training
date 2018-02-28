@@ -87,4 +87,9 @@ platform :ios do
     puts "Will Upload to Test"
   end
 
+  lane :screenshots do
+      capture_screenshots
+      frame_screenshots(white: true)
+  end
+
 end
