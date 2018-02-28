@@ -38,11 +38,6 @@ platform :ios do
 
     sonar(project_version: "#{version}b#{build}",
           sonar_runner_args: "-Dsonar.branch=#{branch}")
-    
-    puts "CREDENTIALS::::::::"
-    puts ENV["SONAR_USR"]
-    puts ENV["SONAR_PWD"]
-    puts "CREDENTIALS::::::::"
 
     UI.user_error!("Quality Gate Error") if !quality_gate
   end
@@ -54,10 +49,6 @@ platform :ios do
       properties[$1.strip] = $2 if line =~ /([^=]*)=(.*)/
     end
     
-    puts file
-
-    puts properties
-
     sonar_server_url = properties['serverUrl']
     ce_task_url = properties['ceTaskUrl']
 
@@ -69,8 +60,6 @@ platform :ios do
         success = ce_task["task"]["status"] == "SUCCESS"
       end until success ? success : sleep(5) && success
     }
-
-    puts ce_task
 
     uri = URI(sonar_server_url + '/api/qualitygates/project_status?analysisId=' + ce_task["task"]["analysisId"])
 
@@ -84,7 +73,25 @@ platform :ios do
     end
     quality_gate = JSON.parse(response2)
 
+    puts "Quality Gate status -> #{quality_gate['projectStatus']['status']}"
+
     quality_gate['projectStatus']['status'] != 'ERROR'
+  end
+
+  lane :auth_test do 
+    uri = URI('http://httpbin.org/basic-auth/admin/admin')
+    
+    response2 = Net::HTTP.start(uri.host, uri.port) do |http|
+      request = Net::HTTP::Get.new uri.request_uri
+      request.basic_auth ENV["SONAR_USR"], ENV["SONAR_PWD"]
+
+      response = http.request request # Net::HTTPResponse object
+
+      response.body
+    end
+    
+    puts response2
+
   end
 
   private_lane :deploy_prod do
