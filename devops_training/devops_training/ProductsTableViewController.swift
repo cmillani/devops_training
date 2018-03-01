@@ -15,7 +15,9 @@ class ProductsTableViewController: UITableViewController {
 		
 		let client = NetworkingClient()
 		// https://devops-api.azure-api.net/test  -> azure url
-		client.get(urlString: "https://zzfu316epf.execute-api.us-east-2.amazonaws.com/DevOps/products") { (data, error) in
+		// https://zzfu316epf.execute-api.us-east-2.amazonaws.com/DevOps/products -> aws
+		// https://us-central1-devops-cab4b.cloudfunctions.net/devOps/products -> firebase
+		client.get(urlString: "https://us-central1-devops-cab4b.cloudfunctions.net/devOps/products/white") { (data, error) in
 			
 			guard let data = data else { return }
 			var products: [ProductVO]
