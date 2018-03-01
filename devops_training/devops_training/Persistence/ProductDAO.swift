@@ -19,11 +19,13 @@ import RealmSwift
     }
 }
 
-class ProductDAO {
-    
-    static let shared: ProductDAO = ProductDAO()
-    
-    private init() {}
+protocol ProductDAOProtocol {
+    func getAllProducts() -> [ProductVO]
+    func deleteProduct()
+    func createProduct(name: String, price: Double)
+}
+
+class ProductDAO: ProductDAOProtocol {
     
     func createProduct(name: String, price: Double) {
         let ROProduct = Product()

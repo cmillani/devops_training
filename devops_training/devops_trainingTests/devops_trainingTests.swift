@@ -7,6 +7,7 @@
 //
 
 import XCTest
+
 @testable import devops_training
 
 class DevopsTrainingTests: XCTestCase {

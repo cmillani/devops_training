@@ -13,6 +13,15 @@ class ProductCreationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var productPrice: UITextField!
     @IBOutlet weak var productName: UITextField!
     
+    let assembler: Assembler
+    let productDAO: ProductDAOProtocol
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.assembler = DevOpsAssembler.shared
+        self.productDAO = assembler.resolve()
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,7 +46,7 @@ class ProductCreationViewController: UIViewController, UITextFieldDelegate {
             self.navigationController?.popViewController(animated: true)
             return
         }
-        ProductDAO.shared.createProduct(name: name, price: price)
+        self.productDAO.createProduct(name: name, price: price)
         self.navigationController?.popViewController(animated: true)
     }
     
