@@ -73,3 +73,6 @@ sonar-reports
 
 output
 screenshots
+
+node_modules
+firebase-key.json

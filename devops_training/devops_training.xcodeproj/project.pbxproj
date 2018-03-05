@@ -23,10 +23,6 @@
 		074D688320482BCC0039A1E5 /* MechanismsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D688220482BCC0039A1E5 /* MechanismsAssembler.swift */; };
 		074D688520482C260039A1E5 /* DAOAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D688420482C260039A1E5 /* DAOAssembler.swift */; };
 		074D688720482D010039A1E5 /* ProductMechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D688620482D010039A1E5 /* ProductMechanism.swift */; };
-		074D6893204873C10039A1E5 /* DAOAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D6892204873C10039A1E5 /* DAOAssembler.swift */; };
-		074D6895204873CE0039A1E5 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D6894204873CE0039A1E5 /* Assembler.swift */; };
-		074D6897204873DB0039A1E5 /* MechanismsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D6896204873DB0039A1E5 /* MechanismsAssembler.swift */; };
-		074D689A204875AA0039A1E5 /* TestProductDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D6899204875A90039A1E5 /* TestProductDAO.swift */; };
 		AED77CC82045063700632BBB /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED77CC72045063700632BBB /* NetworkClient.swift */; };
 		AED77CCA20450BB600632BBB /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED77CC920450BB600632BBB /* ProductResponse.swift */; };
 		AEDA17342045D32E001E8A16 /* AddNewProductTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDA17332045D32E001E8A16 /* AddNewProductTest.swift */; };
@@ -81,10 +77,6 @@
 		074D688220482BCC0039A1E5 /* MechanismsAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MechanismsAssembler.swift; sourceTree = "<group>"; };
 		074D688420482C260039A1E5 /* DAOAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOAssembler.swift; sourceTree = "<group>"; };
 		074D688620482D010039A1E5 /* ProductMechanism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMechanism.swift; sourceTree = "<group>"; };
-		074D6892204873C10039A1E5 /* DAOAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOAssembler.swift; sourceTree = "<group>"; };
-		074D6894204873CE0039A1E5 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
-		074D6896204873DB0039A1E5 /* MechanismsAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MechanismsAssembler.swift; sourceTree = "<group>"; };
-		074D6899204875A90039A1E5 /* TestProductDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProductDAO.swift; sourceTree = "<group>"; };
 		AED77CC72045063700632BBB /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		AED77CC920450BB600632BBB /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 		AEDA17332045D32E001E8A16 /* AddNewProductTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewProductTest.swift; sourceTree = "<group>"; };
@@ -172,8 +164,6 @@
 		074D684F203DDDF00039A1E5 /* devops_trainingTests */ = {
 			isa = PBXGroup;
 			children = (
-				074D6898204875840039A1E5 /* Persistence */,
-				074D6891204873B10039A1E5 /* Assembler */,
 				074D6850203DDDF00039A1E5 /* devops_trainingTests.swift */,
 				074D6852203DDDF00039A1E5 /* Info.plist */,
 			);
@@ -249,24 +239,6 @@
 				074D688220482BCC0039A1E5 /* MechanismsAssembler.swift */,
 			);
 			path = Assembler;
-			sourceTree = "<group>";
-		};
-		074D6891204873B10039A1E5 /* Assembler */ = {
-			isa = PBXGroup;
-			children = (
-				074D6894204873CE0039A1E5 /* Assembler.swift */,
-				074D6892204873C10039A1E5 /* DAOAssembler.swift */,
-				074D6896204873DB0039A1E5 /* MechanismsAssembler.swift */,
-			);
-			path = Assembler;
-			sourceTree = "<group>";
-		};
-		074D6898204875840039A1E5 /* Persistence */ = {
-			isa = PBXGroup;
-			children = (
-				074D6899204875A90039A1E5 /* TestProductDAO.swift */,
-			);
-			path = Persistence;
 			sourceTree = "<group>";
 		};
 		AEDA173A2045D6C9001E8A16 /* Snapshots */ = {
@@ -496,11 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				074D689A204875AA0039A1E5 /* TestProductDAO.swift in Sources */,
 				074D6851203DDDF00039A1E5 /* devops_trainingTests.swift in Sources */,
-				074D6895204873CE0039A1E5 /* Assembler.swift in Sources */,
-				074D6897204873DB0039A1E5 /* MechanismsAssembler.swift in Sources */,
-				074D6893204873C10039A1E5 /* DAOAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

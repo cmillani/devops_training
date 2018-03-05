@@ -12,10 +12,20 @@ protocol Assembler: MechanismsAssembler, DAOAssembler { }
 
 class DevOpsAssembler: Assembler {
     
-#if TEST
-    static var shared: Assembler = TestDevOpsAssembler()
-#else
     static var shared: Assembler = DevOpsAssembler()
-#endif
+    
     private init() { }
+}
+
+
+class TesteAssembelr: Assembler {
+    
+}
+
+extension DAOAssembler where Self: TesteAssembelr {
+    
+}
+
+extension TesteAssembelr: DAOAssembler {
+    
 }
